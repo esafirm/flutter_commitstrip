@@ -16,6 +16,7 @@ class ComicItem extends Object with _$ComicItemSerializerMixin {
   Content content;
   Title title;
   int featured_media;
+  String link;
 
   ComicItem({this.content});
   factory ComicItem.fromJson(Map<String, dynamic> json) =>

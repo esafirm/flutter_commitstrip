@@ -23,13 +23,12 @@ class ComicItemView extends StatelessWidget {
 
         if (snapshot.connectionState != ConnectionState.done ||
             snapshot.error != null) {
-          return DecoratedBox(decoration: BoxDecoration(color: Colors.amber));
+          return Center(child: CircularProgressIndicator());
         } else {
           final FeaturedMedia media = snapshot.data;
           return CachedNetworkImage(
             fit: BoxFit.cover,
             imageUrl: media.link,
-            placeholder: CircularProgressIndicator(),
           );
         }
       },
@@ -55,9 +54,11 @@ class ComicItemView extends StatelessWidget {
           ),
           Container(
             padding: EdgeInsets.only(left: 15.0, right: 15.0, bottom: 8.0),
-            child: Text(
-              title,
-              style: textTheme.title.apply(color: Colors.white),
+            child: Flexible(
+              child: Text(
+                title,
+                style: textTheme.title.apply(color: Colors.white),
+              ),
             ),
           ),
         ],

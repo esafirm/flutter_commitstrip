@@ -3,7 +3,7 @@
 part of 'Comic.dart';
 
 // **************************************************************************
-// Generator: JsonSerializableGenerator
+// JsonSerializableGenerator
 // **************************************************************************
 
 DsonComic _$DsonComicFromJson(Map<String, dynamic> json) {
@@ -28,17 +28,20 @@ ComicItem _$ComicItemFromJson(Map<String, dynamic> json) {
     ..title = json['title'] == null
         ? null
         : new Title.fromJson(json['title'] as Map<String, dynamic>)
-    ..featured_media = json['featured_media'] as int;
+    ..featured_media = json['featured_media'] as int
+    ..link = json['link'] as String;
 }
 
 abstract class _$ComicItemSerializerMixin {
   Content get content;
   Title get title;
   int get featured_media;
+  String get link;
   Map<String, dynamic> toJson() => <String, dynamic>{
         'content': content,
         'title': title,
-        'featured_media': featured_media
+        'featured_media': featured_media,
+        'link': link
       };
 }
 
