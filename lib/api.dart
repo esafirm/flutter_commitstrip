@@ -7,9 +7,9 @@ import 'model/FeaturedMedia.dart';
 import 'package:http/http.dart' as http;
 
 class Api {
-  static Future<List<ComicItem>> fetchList() async {
+  static Future<List<ComicItem>> fetchList([int page = 1]) async {
     final response = await http.get(
-        'https://www.commitstrip.com/en/wp-json/wp/v2/posts?per_page=5&page=1');
+        'https://www.commitstrip.com/en/wp-json/wp/v2/posts?per_page=5&page=$page');
 
     var list = json.decode(response.body);
     return list.map<ComicItem>((data) => ComicItem.fromJson(data)).toList();

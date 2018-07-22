@@ -52,13 +52,11 @@ class ComicItemView extends StatelessWidget {
             width: 80.0,
             child: Image(image: assetImage),
           ),
-          Container(
+          Padding(
             padding: EdgeInsets.only(left: 15.0, right: 15.0, bottom: 8.0),
-            child: Flexible(
-              child: Text(
-                title,
-                style: textTheme.title.apply(color: Colors.white),
-              ),
+            child: Text(
+              title,
+              style: textTheme.title.apply(color: Colors.white),
             ),
           ),
         ],
