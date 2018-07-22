@@ -1,8 +1,12 @@
-# flutter_commitstrip
+# CommitStrip App in Flutter 
 
-A new Flutter project.
+> This project still have a lot of issues. 
 
-## Getting Started
+## Screenshots
 
-For help getting started with Flutter, view our online
-[documentation](https://flutter.io/).
+![](https://github.com/esafirm/flutter_commitstrip/blob/master/art/ss1.png?raw=true)
+![](https://github.com/esafirm/flutter_commitstrip/blob/master/art/ss2.png?raw=true)
+
+## License 
+
+MIT
